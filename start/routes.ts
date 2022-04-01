@@ -23,11 +23,3 @@ import Route from '@ioc:Adonis/Core/Route'
 Route.get('/', async () => {
   return { hello: 'world' }
 })
-
-Route.group(() => {
-  Route.post("addList", "RefereesController.addList");
-  Route.post("getTweetedReferee", "RefereesController.getTweetedReferee");
-  Route.post("setRewardReferee", "RefereesController.setRewardReferee");
-  Route.post("saveTwitterInfo", "RefereesController.saveTwitterInfo");
-  Route.get("getTwitterInfo", "RefereesController.getTwitterInfo");
-}).prefix("api");
